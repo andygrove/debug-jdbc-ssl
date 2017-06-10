@@ -22,7 +22,7 @@ object DebugSSL {
 
     Class.forName("com.mysql.jdbc.Driver")
     
-    System.setProperty("javax.net.debug", "ssl")
+    System.setProperty("javax.net.debug", "all")
 
     val connectionString = s"jdbc:mysql://${conf.mysqlHost.apply()}:${conf.mysqlPort.apply()}?useSSL=true&verifyServerCertificate=true"
 
